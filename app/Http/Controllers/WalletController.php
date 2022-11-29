@@ -30,7 +30,7 @@ class WalletController extends Controller
             if(!$checkWallet) {
                 $wallet = new Wallet;
                 $wallet->user_id = auth()->user()->id;
-                $wallet->main = $request->amount;
+                $wallet->balance = $request->amount;
                 $wallet->save();
             } else {
                 $checkWallet->balance = $checkWallet->balance + $request->amount;

@@ -27,7 +27,7 @@ class WalletController extends Controller
 
             $checkWallet = Wallet::where('user_id', auth()->user()->id)->first();
 
-            if(!checkWallet) {
+            if(!$checkWallet) {
                 $wallet = new Wallet;
                 $wallet->user_id = auth()->user()->id;
                 $wallet->main = $request->amount;
@@ -77,7 +77,7 @@ class WalletController extends Controller
 
             $checkWallet = Wallet::where('user_id', auth()->user()->id)->first();
 
-            if(!checkWallet) {
+            if(!$checkWallet) {
                 return response()->json([
                     'status' => 'error',
                     'error' => "Insufficient funds"

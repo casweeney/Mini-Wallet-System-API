@@ -20,4 +20,18 @@ use App\Http\Controllers\Auth\AuthController;
 //     return $request->user();
 // });
 
-Route::post('/user/signup', [AuthController::class, 'signup']);
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function ($router) {
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/register', [AuthController::class, 'signup']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::get('/user-profile', [AuthController::class, 'userProfile']);    
+});
+
+Route::group([ 'middleware' => 'jwt.auth' ], function() {
+    Route::post('/user/deposit', [WalletController::class, 'deposit']);
+    Route::post('/user/withdraw', [WalletController::class, 'withdraw']);
+    Route::get('/user/transactions', [WalletController::class, 'userTransactions']);
+});

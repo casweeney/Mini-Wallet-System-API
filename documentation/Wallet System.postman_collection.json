@@ -1,0 +1,792 @@
+{
+	"info": {
+		"_postman_id": "d833a15e-514d-46f3-a976-c740321e71b3",
+		"name": "Wallet System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8025677"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "Casweeney",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Ojukwu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "casweeno2000@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "godisgood",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Registers a new user"
+			},
+			"response": [
+				{
+					"name": "Register user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "Casweeney",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Ojukwu",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "casweeno2000@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "godisgood",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:35:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:35:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"signup successful\",\n    \"user\": {\n        \"firstname\": \"Casweeney\",\n        \"lastname\": \"Ojukwu\",\n        \"email\": \"casweeno2000@gmail.com\",\n        \"updated_at\": \"2022-11-29T08:35:02.000000Z\",\n        \"created_at\": \"2022-11-29T08:35:02.000000Z\",\n        \"id\": 10\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login?email=casweeno2000@gmail.com&password=godisgood",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "casweeno2000@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "godisgood"
+						}
+					]
+				},
+				"description": "Logs a new user in and return access token"
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login?email=casweeno2000@gmail.com&password=godisgood",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "casweeno2000@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "godisgood"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:37:33 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:37:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Njk3MTEwNTMsImV4cCI6MTY2OTcxNDY1MywibmJmIjoxNjY5NzExMDUzLCJqdGkiOiJNRVI4b1J3MU5MQk1ZenQ1Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bhJF4W_70c-5LAAtZdkbWewOVJ0zBEO8mwgwUuuQtQo\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600,\n    \"user\": {\n        \"id\": 10,\n        \"firstname\": \"Casweeney\",\n        \"lastname\": \"Ojukwu\",\n        \"email\": \"casweeno2000@gmail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-11-29T08:35:02.000000Z\",\n        \"updated_at\": \"2022-11-29T08:35:02.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Deposit ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Njk3MTEwNTMsImV4cCI6MTY2OTcxNDY1MywibmJmIjoxNjY5NzExMDUzLCJqdGkiOiJNRVI4b1J3MU5MQk1ZenQ1Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bhJF4W_70c-5LAAtZdkbWewOVJ0zBEO8mwgwUuuQtQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"deposit"
+					]
+				},
+				"description": "This endpoint allows logged in user to deposit funds into their wallet"
+			},
+			"response": [
+				{
+					"name": "Deposit ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"deposit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:47:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:47:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"deposit success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Withdraw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Njk3MTEwNTMsImV4cCI6MTY2OTcxNDY1MywibmJmIjoxNjY5NzExMDUzLCJqdGkiOiJNRVI4b1J3MU5MQk1ZenQ1Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bhJF4W_70c-5LAAtZdkbWewOVJ0zBEO8mwgwUuuQtQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"withdraw"
+					]
+				},
+				"description": "This endpoint allow logged users to withdraw funds from their wallet"
+			},
+			"response": [
+				{
+					"name": "Withdraw",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/withdraw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"withdraw"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:48:49 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:48:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"withdrawal success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Njk3MTEwNTMsImV4cCI6MTY2OTcxNDY1MywibmJmIjoxNjY5NzExMDUzLCJqdGkiOiJNRVI4b1J3MU5MQk1ZenQ1Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bhJF4W_70c-5LAAtZdkbWewOVJ0zBEO8mwgwUuuQtQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/user-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user-profile"
+					]
+				},
+				"description": "Returns details of logged in user"
+			},
+			"response": [
+				{
+					"name": "User Profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/user-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"user-profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:40:50 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:40:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 10,\n    \"firstname\": \"Casweeney\",\n    \"lastname\": \"Ojukwu\",\n    \"email\": \"casweeno2000@gmail.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2022-11-29T08:35:02.000000Z\",\n    \"updated_at\": \"2022-11-29T08:35:02.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Njk3MTEwNTMsImV4cCI6MTY2OTcxNDY1MywibmJmIjoxNjY5NzExMDUzLCJqdGkiOiJNRVI4b1J3MU5MQk1ZenQ1Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bhJF4W_70c-5LAAtZdkbWewOVJ0zBEO8mwgwUuuQtQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/user/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"transactions"
+					]
+				},
+				"description": "This endpoint returns all transactions of logged in user"
+			},
+			"response": [
+				{
+					"name": "User Transactions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/user/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"transactions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:51:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Nov 2022 08:51:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 10,\n        \"transaction_type\": \"credit\",\n        \"amount\": 200,\n        \"created_at\": \"2022-11-29T08:47:02.000000Z\",\n        \"updated_at\": \"2022-11-29T08:47:02.000000Z\",\n        \"user\": {\n            \"id\": 10,\n            \"firstname\": \"Casweeney\",\n            \"lastname\": \"Ojukwu\",\n            \"email\": \"casweeno2000@gmail.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2022-11-29T08:35:02.000000Z\",\n            \"updated_at\": \"2022-11-29T08:35:02.000000Z\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"user_id\": 10,\n        \"transaction_type\": \"debit\",\n        \"amount\": 100,\n        \"created_at\": \"2022-11-29T08:48:49.000000Z\",\n        \"updated_at\": \"2022-11-29T08:48:49.000000Z\",\n        \"user\": {\n            \"id\": 10,\n            \"firstname\": \"Casweeney\",\n            \"lastname\": \"Ojukwu\",\n            \"email\": \"casweeno2000@gmail.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2022-11-29T08:35:02.000000Z\",\n            \"updated_at\": \"2022-11-29T08:35:02.000000Z\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}

@@ -92,7 +92,8 @@ class AuthController extends Controller
 
     public function userProfile()
     {
-        return response()->json(auth()->user());
+        $user = User::with('wallet')->where('id', auth()->user()->id)->first();
+        return response()->json($user);
     }
 
     public function logout(Request $request)

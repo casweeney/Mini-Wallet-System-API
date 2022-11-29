@@ -17,7 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->bigInteger('user_id');
             $table->string('transaction_type')->nullable();
-            $table->bigInteger('main_balance')->nullable();
+            $table->bigInteger('amount')->nullable();
             $table->timestamps();
         });
     }
